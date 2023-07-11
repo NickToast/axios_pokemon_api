@@ -38,9 +38,8 @@ function App() {
 
 
   const style = {
-    marginLeft: "40px",
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "space-evenly"
   }
 
   // const width = {
@@ -56,7 +55,7 @@ function App() {
         <ul>
           {
             pokemonList.map((pokemon, i) => {
-              return (<li key={i+1}>{pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</li>)
+              return (<li key={i}>{i+1} - {pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</li>)
             })}
         </ul>
       </div>
@@ -66,7 +65,7 @@ function App() {
         <ul>
           {
             pokemonListAxios.map((pokemon, i) => {
-              return (<li key={i+1}>{pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</li>)
+              return (<li key={i}>{i+1} - {pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</li>)
             })}
         </ul>
       </div>
